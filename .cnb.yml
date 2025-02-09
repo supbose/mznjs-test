@@ -21,7 +21,7 @@ main:
     - imports: https://cnb.cool/qingshuPrivate/setting/-/blob/main/envs.yml
       stages:
         - name: sync to github
-          image: docker.cnb.cool/mznjs/docker/github-sync/github-sync #tencentcom/git-sync
+          image: tencentcom/git-sync #docker.cnb.cool/mznjs/docker/github-sync/github-sync #
           settings:
             target_url: https://github.com/supbose/mznjs-test.git
             auth_type: https
