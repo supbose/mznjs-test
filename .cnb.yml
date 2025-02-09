@@ -16,4 +16,15 @@ $:
           script: npm install -g pnpm@latest-10
         - name: install
           script: pnpm install
+main:
+  push:
+    - stages:
+        - name: sync to github
+          image: tencentcom/git-sync
+          settings:
+            target_url: https://github.com/supbose/mznjs-test.git
+            auth_type: https
+            username: supbose
+            password: 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
+            branch: main
             
