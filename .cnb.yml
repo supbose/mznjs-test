@@ -1,0 +1,14 @@
+# .cnb.yml
+$:
+  vscode:
+    - runner:
+        cpus: 4
+        memory: 8G
+      docker:
+        build: .ide/Dockerfile
+      services:
+        - vscode
+        - docker
+      stages:
+        - name: ls
+          script: ls -al
