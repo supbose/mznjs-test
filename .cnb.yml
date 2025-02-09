@@ -25,9 +25,9 @@ main:
           settings:
             target_url: https://github.com/supbose/mznjs-test.git
             auth_type: https
-            username: $GITHUN_USERNAME
-            password: $GITHUB_TOKEN
-            git_user: $GITHUN_USERNAME
-            git_email: $GITHUB_USERMAIL
+            username: ${GITHUN_USERNAME}
+            password: ${GITHUB_TOKEN}
+            git_user: ${GITHUN_USERNAME}
+            git_email: ${GITHUB_USERMAIL}
             branch: main
             
