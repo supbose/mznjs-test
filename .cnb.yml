@@ -29,5 +29,6 @@ main:
             password: ${GITHUB_ACCESS_TOKEN}
             git_user: ${GITHUB_USERNAME}
             git_email: ${GITHUB_USERMAIL}
+            git_commit: true
             branch: main
             
