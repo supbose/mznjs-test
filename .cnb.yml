@@ -5,10 +5,14 @@ $:
         cpus: 4       
       docker:
         build: .ide/Dockerfile
-        image: cnbcool/default-dev-env:latest
+        image: node:18-alpine
       services:
         - vscode
         - docker
       stages:
         - name: ls
           script: ls -al
+        - name: run
+          script: |
+            - pnpm install
+            
