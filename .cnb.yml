@@ -14,5 +14,6 @@ $:
           script: ls -al
         - name: run
           script: |
+            - npm install -g pnpm@latest-10
             - pnpm install
             
