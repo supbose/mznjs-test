@@ -19,7 +19,7 @@ $:
 main:
   push:
     - imports: https://cnb.cool/qingshuPrivate/setting/-/blob/main/envs.yml
-    - stages:
+      stages:
         - name: sync to github
           image: docker.cnb.cool/mznjs/docker/github-sync/github-sync
           settings:
