@@ -2,7 +2,7 @@
 $:
   vscode:
     - runner:
-        cpus: 4       
+        cpus: 1       
       docker:
         build: .ide/Dockerfile
         image: node:18-alpine
