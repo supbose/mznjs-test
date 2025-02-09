@@ -2,9 +2,9 @@
 import { db, lib } from '@mznjs/helper';
 import * as mznjs from '@mznjs/helper';
 
-// import overlay from 'unstorage/drivers/overlay';
-// import memory from 'unstorage/drivers/memory';
-// import fs from 'unstorage/drivers/fs';
+import overlay from 'unstorage/drivers/overlay';
+import memory from 'unstorage/drivers/memory';
+import fs from 'unstorage/drivers/fs';
 
 // const overlay = await import(builtinDrivers.overlay);
 // const memory = await import(builtinDrivers.memory);
@@ -16,18 +16,20 @@ import * as mznjs from '@mznjs/helper';
 //   }),
 // });
 
-// const storage = createStorage({
-//   base: 'app:',
-//   // driver: overlay({
-//   //   layers: [fs({ base: './data' }), memory()],
-//   // }),
-// });
-// await storage.setItem('1', 'test');
-// await storage.setItem('2', 'test');
-// await storage.setItem('3', 'test');
-// await storage.setItem('4', 'test');
-// await storage.setItem('5', 'test');
-// const items = await storage.getItems(['1', '2', '3']);
+const storage = mznjs.unstorage.createStorage({
+  base: 'app:',
+  driver: overlay({
+    layers: [fs({ base: './data' }), memory()],
+  }),
+});
+await storage.setItem('1', 'test');
+await storage.setItem('2', 'test');
+await storage.setItem('3', 'test');
+await storage.setItem('4', 'test');
+await storage.setItem('5', 'test');
+const storageitems = await storage.getItems(['1', '2', '3']);
+console.log({ storageitems });
+
 await db.setItem('1', 'test');
 await db.setItem('2', 'test');
 await db.setItem('3', 'test');
