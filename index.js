@@ -1,5 +1,5 @@
 // run `node index.js` in the terminal
-//测试一下docker环境
+//测试一下docker环境1
 
 import { db, lib } from '@mznjs/helper';
 import * as mznjs from '@mznjs/helper';
