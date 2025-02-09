@@ -15,5 +15,5 @@ $:
         - name: run
           script: npm install -g pnpm@latest-10
         - name: install
-          script: pnpm install --frozen-lockfile
+          script: pnpm install
             
