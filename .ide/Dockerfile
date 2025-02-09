@@ -1,5 +1,5 @@
 # .ide/Dockerfile
-FROM node:18-alpine
+FROM node:20
 
 # 以及按需安装其他软件
 # RUN apt-get update && apt-get install -y git

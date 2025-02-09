@@ -2,8 +2,7 @@
 $:
   vscode:
     - runner:
-        cpus: 4
-        memory: 8G
+        cpus: 4       
       docker:
         build: .ide/Dockerfile
       services:
