@@ -6,15 +6,7 @@ import overlay from 'unstorage/drivers/overlay';
 import memory from 'unstorage/drivers/memory';
 import fs from 'unstorage/drivers/fs';
 
-// const overlay = await import(builtinDrivers.overlay);
-// const memory = await import(builtinDrivers.memory);
-// const fs = await import(builtinDrivers.fs);
-// const storage = createStorage({
-//   base: 'app:',
-//   driver: overlay.default({
-//     layers: [fs.default({ base: './data' }), memory.default()],
-//   }),
-// });
+
 
 const storage = mznjs.unstorage.createStorage({
   base: 'app:',
