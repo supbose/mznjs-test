@@ -5,17 +5,20 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "up": "npx taze",
+    "up": "taze -r",
     "dev": "nodemon index.js",
     "node": "node index.js",
     "db": "node unstorage.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@mznjs/helper": "0.0.3-beta.5",
+    "@mznjs/helper": "^0.0.4-beta.1",
     "consola": "^3.4.0",
     "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "taze": "^18.4.0"
   }
 }
