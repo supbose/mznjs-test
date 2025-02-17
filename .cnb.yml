@@ -10,18 +10,18 @@ $:
         - vscode
         - docker
       stages:
-        - name: ls
+        - name: 列出文件
           script: ls -al
-        - name: run
+        - name: 安装 pnpm
           script: npm install -g pnpm@latest-10
-        - name: install
+        - name: 安装依赖
           script: pnpm install
 main:
   push:
     - imports: https://cnb.cool/qingshuPrivate/setting/-/blob/main/envs.yml
       stages:
-        - name: sync to github
-          image: docker.cnb.cool/mznjs/docker/github-sync ##tencentcom/git-sync
+        - name: 同步到 GitHub
+          image: docker.cnb.cool/mznjs/docker/github-sync
           settings:
             target_url: https://github.com/supbose/mznjs-test.git
             auth_type: https
@@ -31,4 +31,3 @@ main:
             git_email: ${GITHUB_USERMAIL}
             git_commit: false
             branch: main
-            
